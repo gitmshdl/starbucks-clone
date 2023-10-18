@@ -6,8 +6,9 @@ function Hero1({
   subtitle,
   description,
   bgcolor,
-  subtitleSize = "h3",
-  descSize = "h5",
+  subtitleSize = "50px",
+  descSize = "24px",
+  smallSize = false,
   btnText,
 }) {
   const CustomBox = styled(Box)(({ theme }) => ({
@@ -33,6 +34,15 @@ function Hero1({
     },
   }));
 
+  //   const CustomText = styled(Typography)(({ theme }) => ({
+  //     color: "white",
+  //     textAlign: "center",
+  //     px: { xs: "1rem" },
+  //     fontSize
+  //   }));
+
+  //28 22
+
   return (
     <CustomBox>
       <Box flex={1}>
@@ -53,19 +63,26 @@ function Hero1({
         flex={1}
       >
         <Typography
-          variant={subtitleSize}
+          //   variant={subtitleSize}
           sx={{
             color: "white",
             fontWeight: "bold",
             textAlign: "center",
-            px: { xs: "0.5rem" },
+            px: { xs: "1rem" },
+            fontSize: { xs: smallSize ? "22px" : "28px", md: subtitleSize },
           }}
         >
           {subtitle}
         </Typography>
         <Typography
-          variant={descSize}
-          sx={{ color: "white", maxWidth: "27rem", textAlign: "center" }}
+          //   variant={descSize}
+          sx={{
+            color: "white",
+            maxWidth: "27rem",
+            textAlign: "center",
+            px: { xs: "1rem" },
+            fontSize: { xs: smallSize ? "16px" : "22px", md: descSize },
+          }}
         >
           {description}
         </Typography>

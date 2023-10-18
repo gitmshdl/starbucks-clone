@@ -7,10 +7,10 @@ import Footer from "../components/Footer";
 // import pumpkin from "../assets/pumpkin.webp";
 import chai from "../assets/chai.webp";
 // import pumpkinDrink from "../assets/pumpkinDrink.jpg";
-import rewards from "../assets/starbucksRewards.webp";
+// import rewards from "../assets/starbucksRewards.webp";
 import muffin from "../assets/muffin.webp";
 import tdaero from "../assets/tdaero.jpg";
-import takeout from "../assets/takeout.jpg";
+// import takeout from "../assets/takeout.jpg";
 import bean from "../assets/bean.webp";
 import bakes from "../assets/bakes.jpg";
 
@@ -29,6 +29,7 @@ function Home() {
             btnText={d.btnText}
             subtitleSize={d.subtitleSize}
             descSize={d.descSize}
+            smallSize={d.smallSize}
           />
         ) : (
           <Hero2
@@ -87,19 +88,20 @@ const data = [
     bgcolor: "#b04a5a",
     btnText: "Order now",
   },
+  // {
+  //   id: 2,
+  //   image: rewards,
+  //   subtitle: "We’re celebrating PSL’s birthday. Yours is next!",
+  //   description:
+  //     "Join Starbucks® Rewards and enjoy a free drink on your birthday every year.*",
+  //   bgcolor: "#1e3932",
+  //   subtitleSize: "h5",
+  //   descSize: "h6",
+  //   btnText: "Join now",
+  //   smallSize: true,
+  // },
   {
     id: 2,
-    image: rewards,
-    subtitle: "We’re celebrating PSL’s birthday. Yours is next!",
-    description:
-      "Join Starbucks® Rewards and enjoy a free drink on your birthday every year.*",
-    bgcolor: "#1e3932",
-    subtitleSize: "h5",
-    descSize: "h6",
-    btnText: "Join now",
-  },
-  {
-    id: 3,
     image: muffin,
     subtitle: "Twice the spice",
     description:
@@ -108,7 +110,7 @@ const data = [
     btnText: "Order now",
   },
   {
-    id: 4,
+    id: 3,
     image: tdaero,
     subtitle: "Spice up your Rewards",
     description:
@@ -117,18 +119,19 @@ const data = [
     btnText: "Link now",
     subtitleSize: "h5",
     descSize: "h6",
+    smallSize: true,
   },
-  {
-    id: 5,
-    image: takeout,
-    subtitle: "Pumpkin spice, delivered so nice",
-    description:
-      "Order now on the DoorDash app and get 20% off your next Starbucks® order of $20+ (up to $10) until October 15. Terms apply.***",
-    bgcolor: "#1e3932",
-    btnText: "Order now",
-    subtitleSize: "h5",
-    descSize: "h6",
-  },
+  // {
+  //   id: 5,
+  //   image: takeout,
+  //   subtitle: "Pumpkin spice, delivered so nice",
+  //   description:
+  //     "Order now on the DoorDash app and get 20% off your next Starbucks® order of $20+ (up to $10) until October 15. Terms apply.***",
+  //   bgcolor: "#1e3932",
+  //   btnText: "Order now",
+  //   subtitleSize: "h5",
+  //   descSize: "h6",
+  // },
   {
     id: 6,
     image: bean,
@@ -139,5 +142,6 @@ const data = [
     btnText: "Learn more",
     subtitleSize: "h5",
     descSize: "h6",
+    smallSize: true,
   },
 ];

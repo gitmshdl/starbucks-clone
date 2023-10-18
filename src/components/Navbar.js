@@ -1,8 +1,9 @@
-import { AppBar, Box, Button, Tab, Tabs, Toolbar } from "@mui/material";
+import { AppBar, Avatar, Box, Button, Tab, Tabs, Toolbar } from "@mui/material";
 import React from "react";
 import starbucksLogo from "../assets/starbucksLogo.png";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
 import DrawerComp from "./DrawerComp";
+import { useLocation } from "react-router-dom";
 
 const pages = [
   { name: "Menu", link: "/menu" },
@@ -11,6 +12,7 @@ const pages = [
 ];
 
 function Navbar() {
+  const { pathname } = useLocation();
   return (
     <AppBar position="static" sx={{ backgroundColor: "transparent" }}>
       <Toolbar
@@ -20,22 +22,39 @@ function Navbar() {
           height: "5.5rem",
         }}
       >
-        <Box sx={{ display: "flex", gap: 3, alignItems: "center" }}>
-          <img src={starbucksLogo} alt="starbucks" width={50} />
+        <Box sx={{ display: "flex", gap: 2, alignItems: "center" }}>
+          <Button
+            variant="text"
+            href="/"
+            startIcon={
+              <Avatar src={starbucksLogo} alt="starbucks" size="large" />
+            }
+          />
+
           <Tabs
+            value={pathname}
             aria-label="icon label tabs example"
-            sx={{ display: { xs: "none", md: "block" } }}
+            sx={{
+              color: "black",
+              display: { xs: "none", md: "block" },
+              marginTop: 1,
+            }}
+            TabIndicatorProps={{
+              style: { background: "#006241" },
+            }}
+            textColor="black"
           >
             {pages.map((page, index) => (
-              <a href={page.link} key={index}>
-                <Tab
-                  label={page.name}
-                  sx={{
-                    color: "black",
-                    fontWeight: "bold",
-                  }}
-                />
-              </a>
+              <Tab
+                key={index}
+                href={page.link}
+                label={page.name}
+                value={page.link}
+                sx={{
+                  color: "black",
+                  fontWeight: "bold",
+                }}
+              />
             ))}
           </Tabs>
         </Box>

@@ -43,7 +43,10 @@ function DrawerComp({ pages }) {
               <ListItemButton>
                 <ListItemText
                   primary={page.name}
-                  sx={{ padding: "0.3rem", fontWeight: "bolder" }}
+                  sx={{
+                    padding: "0.3rem",
+                    fontWeight: "bolder",
+                  }}
                 />
               </ListItemButton>
             </a>

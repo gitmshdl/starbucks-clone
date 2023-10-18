@@ -32,8 +32,11 @@ function Footer() {
     display: "flex",
     flexDirection: "column",
     alignItems: "flex-start",
+    gap: 5,
+    marginBottom: "7.5px",
     [theme.breakpoints.up("md")]: {
       flexDirection: "row",
+      gap: 10,
     },
   }));
 
@@ -60,7 +63,7 @@ function Footer() {
                         fontSize: "0.9rem",
                         textTransform: "none",
                         whiteSpace: "pre-line",
-                        textAlign: "center",
+                        alignItems: "center",
                       }}
                     />
                   ))}
@@ -92,7 +95,9 @@ function Footer() {
                     label={tabLabel}
                     sx={{
                       color: "black",
-                      alignSelf: "flex-start",
+                      alignItems: "flex-start",
+                      fontSize: "0.9rem",
+                      textTransform: "none",
                     }}
                   />
                 ))}
@@ -127,20 +132,41 @@ function Footer() {
           <Button variant="text" sx={{ color: "black", textTransform: "none" }}>
             Privacy Notice
           </Button>
+          <Divider
+            orientation="vertical"
+            variant="middle"
+            flexItem
+            sx={{ display: { xs: "none", md: "block" } }}
+          />
           <Button variant="text" sx={{ color: "black", textTransform: "none" }}>
             Term of Use
           </Button>
+          <Divider
+            orientation="vertical"
+            variant="middle"
+            flexItem
+            sx={{ display: { xs: "none", md: "block" } }}
+          />
           <Button variant="text" sx={{ color: "black", textTransform: "none" }}>
             Do Not Share My Personal Information
           </Button>
+          <Divider
+            orientation="vertical"
+            variant="middle"
+            flexItem
+            sx={{ display: { xs: "none", md: "block" } }}
+          />
           <Button variant="text" sx={{ color: "black", textTransform: "none" }}>
             Partners
           </Button>
         </CustomBox>
-        <Button variant="text" sx={{ color: "#00754a", textTransform: "none" }}>
+        <Button
+          variant="text"
+          sx={{ color: "#00754a", textTransform: "none", fontWeight: "bold" }}
+        >
           Passer au site français
         </Button>
-        <Typography variant="body2">
+        <Typography variant="body2" mt={1}>
           © 2023 Starbucks Coffee Company. All rights reserved.
         </Typography>
       </Container>

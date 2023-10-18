@@ -7,8 +7,9 @@ function Hero2({
   description,
   bgcolor,
   btnText,
-  subtitleSize = "h3",
-  descSize = "h5",
+  subtitleSize = "50px",
+  descSize = "24px",
+  smallSize = false,
 }) {
   const CustomBox = styled(Box)(({ theme }) => ({
     display: "flex",
@@ -19,7 +20,7 @@ function Hero2({
     backgroundColor: bgcolor,
     lineHeight: 0,
     [theme.breakpoints.down("md")]: {
-      flexDirection: "column",
+      flexDirection: "column-reverse",
     },
     [theme.breakpoints.up("lg")]: {
       margin: "1.5rem",
@@ -45,20 +46,23 @@ function Hero2({
         flex={1}
       >
         <Typography
-          variant={subtitleSize}
           sx={{
             color: "white",
             fontWeight: "bold",
             textAlign: "center",
             px: { xs: "0.5rem" },
+            fontSize: { xs: smallSize ? "22px" : "28px", md: subtitleSize },
           }}
         >
           {subtitle}
         </Typography>
         <Typography
-          variant={descSize}
-          sx={{ color: "white", maxWidth: "27rem", textAlign: "center" }}
-          textAlign="center"
+          sx={{
+            color: "white",
+            maxWidth: "27rem",
+            textAlign: "center",
+            fontSize: { xs: smallSize ? "16px" : "22px", md: descSize },
+          }}
         >
           {description}
         </Typography>

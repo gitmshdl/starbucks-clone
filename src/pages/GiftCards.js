@@ -1,7 +1,14 @@
 import React from "react";
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 
 function GiftCards() {
-  return <div>Gift Cards</div>;
+  return (
+    <>
+      <Navbar />
+      <Footer />
+    </>
+  );
 }
 
 export default GiftCards;
