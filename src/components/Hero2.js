@@ -50,7 +50,7 @@ function Hero2({
             color: "white",
             fontWeight: "bold",
             textAlign: "center",
-            px: { xs: "0.5rem" },
+            px: { xs: "1rem" },
             fontSize: { xs: smallSize ? "22px" : "28px", md: subtitleSize },
           }}
         >
@@ -61,6 +61,7 @@ function Hero2({
             color: "white",
             maxWidth: "27rem",
             textAlign: "center",
+            px: { xs: "1rem" },
             fontSize: { xs: smallSize ? "16px" : "22px", md: descSize },
           }}
         >
