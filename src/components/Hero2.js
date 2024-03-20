@@ -1,5 +1,6 @@
 import { Box, Button, Typography, styled } from "@mui/material";
 import React from "react";
+import CustomButton from "./CustomButton";
 
 function Hero2({
   image,
@@ -10,6 +11,7 @@ function Hero2({
   subtitleSize = "50px",
   descSize = "24px",
   smallSize = false,
+  color = "white",
 }) {
   const CustomBox = styled(Box)(({ theme }) => ({
     display: "flex",
@@ -47,7 +49,7 @@ function Hero2({
       >
         <Typography
           sx={{
-            color: "white",
+            color: { color },
             fontWeight: "bold",
             textAlign: "center",
             px: { xs: "1rem" },
@@ -58,7 +60,7 @@ function Hero2({
         </Typography>
         <Typography
           sx={{
-            color: "white",
+            color: { color },
             maxWidth: "27rem",
             textAlign: "center",
             px: { xs: "1rem" },
@@ -67,20 +69,7 @@ function Hero2({
         >
           {description}
         </Typography>
-        <Button
-          size="small"
-          variant="outlined"
-          sx={{
-            textTransform: "none",
-            color: "white",
-            border: "1px white solid",
-            borderRadius: "50px",
-            fontSize: "1rem",
-            fontWeight: "bold",
-          }}
-        >
-          {btnText}
-        </Button>
+        <CustomButton color={color} btnText={btnText} />
       </CustomTextBox>
       <Box flex={1}>
         <img

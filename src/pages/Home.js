@@ -1,23 +1,20 @@
 import React from "react";
-import Navbar from "../components/Navbar";
 import Hero1 from "../components/Hero1";
 import Hero2 from "../components/Hero2";
 import Description from "../components/Description";
-import Footer from "../components/Footer";
 // import pumpkin from "../assets/pumpkin.webp";
 import chai from "../assets/chai.webp";
 // import pumpkinDrink from "../assets/pumpkinDrink.jpg";
 // import rewards from "../assets/starbucksRewards.webp";
-import muffin from "../assets/muffin.webp";
 import tdaero from "../assets/tdaero.jpg";
 // import takeout from "../assets/takeout.jpg";
 import bean from "../assets/bean.webp";
-import bakes from "../assets/bakes.jpg";
+import twoGlasses from "../assets/twoGlasses.webp";
+import twoGlasses2 from "../assets/twoGlasses2.webp";
 
 function Home() {
   return (
     <>
-      <Navbar />
       {data.map((d) =>
         d.id % 2 === 0 ? (
           <Hero1
@@ -30,6 +27,7 @@ function Home() {
             subtitleSize={d.subtitleSize}
             descSize={d.descSize}
             smallSize={d.smallSize}
+            color={d.color}
           />
         ) : (
           <Hero2
@@ -41,11 +39,11 @@ function Home() {
             btnText={d.btnText}
             subtitleSize={d.subtitleSize}
             descSize={d.descSize}
+            color={d.color}
           />
         )
       )}
       <Description />
-      <Footer />
     </>
   );
 }
@@ -62,7 +60,7 @@ const data = [
   //   btnText: "Join the celebration",
   // },
   {
-    id: 0,
+    id: 1,
     image: chai,
     subtitle: "Good idea, chai lovers",
     description:
@@ -79,14 +77,24 @@ const data = [
   //   bgcolor: "#b04a5a",
   //   btnText: "Order now",
   // },
+  // {
+  //   id: 1,
+  //   image: bakes,
+  //   subtitle: "Delicious on the daily",
+  //   description:
+  //     "Try the new Potato, Cheddar & Chive Bakes, a comforting combo of hearty ingredients.",
+  //   bgcolor: "#b04a5a",
+  //   btnText: "Order now",
+  // },
   {
-    id: 1,
-    image: bakes,
-    subtitle: "Delicious on the daily",
+    id: 2,
+    image: twoGlasses,
+    subtitle: "Feel-good finds",
     description:
-      "Try the new Potato, Cheddar & Chive Bakes, a comforting combo of hearty ingredients.",
-    bgcolor: "#b04a5a",
+      "Choose the new Hazelnut Oat Shaken Espresso or the classic Brown Sugar Oat Shaken Espresso, both under 150 calories in a grande.",
+    bgcolor: "#efabfc",
     btnText: "Order now",
+    color: "#1e3932",
   },
   // {
   //   id: 2,
@@ -100,25 +108,35 @@ const data = [
   //   btnText: "Join now",
   //   smallSize: true,
   // },
-  {
-    id: 2,
-    image: muffin,
-    subtitle: "Twice the spice",
-    description:
-      "Pair your PSL with its sidekick, the sweet and salty Pumpkin Cream Cheese Muffin.",
-    bgcolor: "#d69a2d",
-    btnText: "Order now",
-  },
+  // {
+  //   id: 2,
+  //   image: muffin,
+  //   subtitle: "Twice the spice",
+  //   description:
+  //     "Pair your PSL with its sidekick, the sweet and salty Pumpkin Cream Cheese Muffin.",
+  //   bgcolor: "#d69a2d",
+  //   btnText: "Order now",
+  // },
   {
     id: 3,
+    image: twoGlasses2,
+    subtitle: "Next-level luxurious",
+    description:
+      "Velvety smooth, deliciously lush. Try the new Oleato Golden FoamTM/MC Iced Shaken Espresso with Toffeenut and the OleatoTM Oat Latte.",
+    bgcolor: "#cfd84d",
+    btnText: "Order now",
+    color: "#1e3932",
+  },
+  {
+    id: 4,
     image: tdaero,
     subtitle: "Spice up your Rewards",
     description:
       "Leaves are falling, Rewards are calling! Join Starbucks Rewards® and link your Aeroplan® account or eligible TD Card to unlock extra perks. **Conditions apply",
     bgcolor: "#006341",
     btnText: "Link now",
-    subtitleSize: "h5",
-    descSize: "h6",
+    subtitleSize: "h5.fontSize",
+    descSize: "h6.fontSize",
     smallSize: true,
   },
   // {
@@ -133,15 +151,15 @@ const data = [
   //   descSize: "h6",
   // },
   {
-    id: 6,
+    id: 5,
     image: bean,
     subtitle: "Learn what's new at Starbucks",
     description:
       "Check out the latest news and stories about our partners (employees), stores and communities.",
     bgcolor: "#006341",
     btnText: "Learn more",
-    subtitleSize: "h5",
-    descSize: "h6",
+    subtitleSize: "h5.fontSize",
+    descSize: "h6.fontSize",
     smallSize: true,
   },
 ];

@@ -1,0 +1,23 @@
+.nav {
+  height: 2.5rem;
+}
+
+.nav > * {
+  color: #000000de;
+  margin-right: 1.5rem;
+  cursor: pointer;
+  font-weight: 400;
+  text-decoration: none;
+}
+
+.active {
+  text-decoration: underline;
+}
+
+/* 
+.list li:first-child::after {
+  content: "";
+  display: block;
+  border-bottom: 1px solid;
+  margin-top: 3px;
+} */

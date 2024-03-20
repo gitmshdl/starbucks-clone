@@ -1,5 +1,4 @@
 import { AppBar, Avatar, Box, Button, Tab, Tabs, Toolbar } from "@mui/material";
-import React from "react";
 import starbucksLogo from "../assets/starbucksLogo.png";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
 import DrawerComp from "./DrawerComp";
@@ -14,7 +13,12 @@ const pages = [
 function Navbar() {
   const { pathname } = useLocation();
   return (
-    <AppBar position="static" sx={{ backgroundColor: "transparent" }}>
+    <AppBar
+      position="static"
+      sx={{
+        backgroundColor: "transparent",
+      }}
+    >
       <Toolbar
         sx={{
           display: "flex",
@@ -42,7 +46,7 @@ function Navbar() {
             TabIndicatorProps={{
               style: { background: "#006241" },
             }}
-            textColor="black"
+            textColor="inherit"
           >
             {pages.map((page, index) => (
               <Tab

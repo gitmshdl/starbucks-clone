@@ -110,22 +110,13 @@ function Footer() {
       <Container sx={{ py: 1 }}>
         <Box sx={{ display: "flex", alignItems: "center", py: 1 }}>
           <IconButton aria-label="facebook">
-            <FacebookIcon
-              icon={FacebookIcon}
-              sx={{ fontSize: "2.25rem", color: "black" }}
-            />
+            <FacebookIcon sx={{ fontSize: "2.25rem", color: "black" }} />
           </IconButton>
           <IconButton aria-label="instagram">
-            <InstagramIcon
-              icon={InstagramIcon}
-              sx={{ fontSize: "2.25rem", color: "black" }}
-            />
+            <InstagramIcon sx={{ fontSize: "2.25rem", color: "black" }} />
           </IconButton>
           <IconButton aria-label="twitter">
-            <TwitterIcon
-              icon={TwitterIcon}
-              sx={{ fontSize: "2.25rem", color: "black" }}
-            />
+            <TwitterIcon sx={{ fontSize: "2.25rem", color: "black" }} />
           </IconButton>
         </Box>
         <CustomBox>
@@ -167,7 +158,7 @@ function Footer() {
           Passer au site français
         </Button>
         <Typography variant="body2" mt={1}>
-          © 2023 Starbucks Coffee Company. All rights reserved.
+          © 2024 Starbucks Coffee Company. All rights reserved.
         </Typography>
       </Container>
     </Box>
