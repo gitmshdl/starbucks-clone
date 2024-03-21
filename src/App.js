@@ -24,10 +24,11 @@ function App() {
           <Route path="previous" element={<Previous />} />
           <Route path="favourites" element={<Favourites />} />
           <Route path=":categoryId/:menuId" element={<MenuDetail />} />
+          <Route path="*" element={<Menu />} />
         </Route>
         <Route path="/rewards" element={<Rewards />} />
         <Route path="/giftcards" element={<GiftCards />} />
-        {/* <Route path="*" element={<NotFound />} /> */}
+        <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer />
     </BrowserRouter>

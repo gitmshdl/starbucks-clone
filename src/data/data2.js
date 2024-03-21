@@ -574,7 +574,7 @@ export const menuData = {
       },
     ],
   },
-  merchanise: {
+  merchandise: {
     category: "Merchandise",
     path: "merchandise",
     subCategory: [

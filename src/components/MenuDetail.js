@@ -1,17 +1,11 @@
-import {
-  Box,
-  Breadcrumbs,
-  Divider,
-  Grid,
-  Typography,
-  styled,
-} from "@mui/material";
+import { Box, Breadcrumbs, Divider, Typography, styled } from "@mui/material";
 import image from "../assets/drinksImage.gif";
 import React from "react";
 import { Link, useParams } from "react-router-dom";
 import MenuHeader from "./MenuHeader";
 import MenuSideBar from "./MenuSideBar";
 import { menuData } from "../data/data2";
+import Grid from "@mui/material/Unstable_Grid2/Grid2";
 
 function MenuDetail() {
   const InnerBox = styled(Box)(({ theme }) => ({
@@ -20,7 +14,7 @@ function MenuDetail() {
     paddingLeft: "7.5rem",
     paddingTop: "4rem",
     [theme.breakpoints.down("md")]: {
-      paddingLeft: "1rem",
+      paddingLeft: 0,
       paddingTop: "2rem",
     },
   }));
@@ -30,7 +24,7 @@ function MenuDetail() {
     maxWidth: "xl",
     display: "flex",
     [theme.breakpoints.down("md")]: {
-      padding: "0",
+      padding: "7.5px",
     },
   }));
 
@@ -98,11 +92,9 @@ function MenuDetail() {
                   {subSubCategory.name}
                   <Divider style={{ height: "1rem" }} />
                 </Typography>
-
                 <Grid container spacing={2} mb="2rem">
                   {subSubCategory.items.map((item, idx) => (
                     <Grid
-                      item
                       xs={6}
                       md={3}
                       sx={{
@@ -110,6 +102,7 @@ function MenuDetail() {
                         flexDirection: "column",
                         alignItems: "center",
                         // justifyContent: "center",
+                        gap: "1rem",
                       }}
                       key={idx}
                     >

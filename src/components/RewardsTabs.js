@@ -76,13 +76,13 @@ function RewardsTabs() {
           centered
           sx={{
             "& .MuiTabs-indicator": { backgroundColor: "#1e3932", height: 5 },
-            "& .MuiTab-root.Mui-selected": { color: "#000000de !important" },
+            "& .MuiTab-root.Mui-selected": { color: "#000000de" },
             "& .MuiTab-root": { fontSize: "2rem" },
           }}
         >
           <Tab
             label={
-              <Typography variant="h5" fontWeight="bold">
+              <Typography variant="h6" fontWeight="bold">
                 25
               </Typography>
             }
@@ -93,7 +93,7 @@ function RewardsTabs() {
           />
           <Tab
             label={
-              <Typography variant="h5" fontWeight="bold">
+              <Typography variant="h6" fontWeight="bold">
                 100
               </Typography>
             }
@@ -104,7 +104,7 @@ function RewardsTabs() {
           />
           <Tab
             label={
-              <Typography variant="h5" fontWeight="bold">
+              <Typography variant="h6" fontWeight="bold">
                 200
               </Typography>
             }
@@ -115,7 +115,7 @@ function RewardsTabs() {
           />
           <Tab
             label={
-              <Typography variant="h5" fontWeight="bold">
+              <Typography variant="h6" fontWeight="bold">
                 300
               </Typography>
             }
@@ -126,7 +126,7 @@ function RewardsTabs() {
           />
           <Tab
             label={
-              <Typography variant="h5" fontWeight="bold">
+              <Typography variant="h6" fontWeight="bold">
                 400
               </Typography>
             }
