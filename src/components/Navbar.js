@@ -13,108 +13,110 @@ const pages = [
 function Navbar() {
   const { pathname } = useLocation();
   return (
-    <AppBar
-      position="static"
-      sx={{
-        backgroundColor: "transparent",
-      }}
-    >
-      <Toolbar
+    <header>
+      <AppBar
+        position="static"
         sx={{
-          display: "flex",
-          justifyContent: "space-between",
-          height: "5.5rem",
+          backgroundColor: "transparent",
         }}
       >
-        <Box sx={{ display: "flex", gap: 2, alignItems: "center" }}>
-          <Button
-            variant="text"
-            href="/"
-            startIcon={
-              <Avatar src={starbucksLogo} alt="starbucks" size="large" />
-            }
-          />
-
-          <Tabs
-            value={pathname}
-            aria-label="icon label tabs example"
-            sx={{
-              color: "black",
-              display: { xs: "none", md: "block" },
-              marginTop: 1,
-            }}
-            TabIndicatorProps={{
-              style: { background: "#006241" },
-            }}
-            textColor="inherit"
-          >
-            {pages.map((page, index) => (
-              <Tab
-                key={index}
-                href={page.link}
-                label={page.name}
-                value={page.link}
-                sx={{
-                  color: "black",
-                  fontWeight: "bold",
-                }}
-              />
-            ))}
-          </Tabs>
-        </Box>
-        <Box
+        <Toolbar
           sx={{
-            display: { xs: "none", md: "flex" },
-            alignItems: "center",
-            gap: "1rem",
-            marginRight: "1rem",
+            display: "flex",
+            justifyContent: "space-between",
+            height: "5.5rem",
           }}
         >
-          <Button
+          <Box sx={{ display: "flex", gap: 2, alignItems: "center" }}>
+            <Button
+              variant="text"
+              href="/"
+              startIcon={
+                <Avatar src={starbucksLogo} alt="starbucks" size="large" />
+              }
+            />
+
+            <Tabs
+              value={pathname}
+              aria-label="icon label tabs example"
+              sx={{
+                color: "black",
+                display: { xs: "none", md: "block" },
+                marginTop: 1,
+              }}
+              TabIndicatorProps={{
+                style: { background: "#006241" },
+              }}
+              textColor="inherit"
+            >
+              {pages.map((page, index) => (
+                <Tab
+                  key={index}
+                  href={page.link}
+                  label={page.name}
+                  value={page.link}
+                  sx={{
+                    color: "black",
+                    fontWeight: "bold",
+                  }}
+                />
+              ))}
+            </Tabs>
+          </Box>
+          <Box
             sx={{
-              color: "black",
-              textTransform: "none",
-              fontWeight: "bold",
-              marginRight: "2.5rem",
-            }}
-            startIcon={<LocationOnIcon />}
-          >
-            Find a store
-          </Button>
-          <Button
-            size="small"
-            sx={{
-              color: "black",
-              border: "1px solid black",
-              textTransform: "none",
-              borderRadius: "50px",
-              fontWeight: "bold",
-              "&:hover": {
-                backgroundColor: "rgba(0,0,0,0.1)",
-              },
+              display: { xs: "none", md: "flex" },
+              alignItems: "center",
+              gap: "1rem",
+              marginRight: "1rem",
             }}
           >
-            Sign in
-          </Button>
-          <Button
-            size="small"
-            sx={{
-              backgroundColor: "black",
-              color: "white",
-              textTransform: "none",
-              borderRadius: "50px",
-              fontWeight: "bold",
-              "&:hover": {
-                backgroundColor: "rgba(0,0,0,0.6)",
-              },
-            }}
-          >
-            Join now
-          </Button>
-        </Box>
-        <DrawerComp pages={pages} />
-      </Toolbar>
-    </AppBar>
+            <Button
+              sx={{
+                color: "black",
+                textTransform: "none",
+                fontWeight: "bold",
+                marginRight: "2.5rem",
+              }}
+              startIcon={<LocationOnIcon />}
+            >
+              Find a store
+            </Button>
+            <Button
+              size="small"
+              sx={{
+                color: "black",
+                border: "1px solid black",
+                textTransform: "none",
+                borderRadius: "50px",
+                fontWeight: "bold",
+                "&:hover": {
+                  backgroundColor: "rgba(0,0,0,0.1)",
+                },
+              }}
+            >
+              Sign in
+            </Button>
+            <Button
+              size="small"
+              sx={{
+                backgroundColor: "black",
+                color: "white",
+                textTransform: "none",
+                borderRadius: "50px",
+                fontWeight: "bold",
+                "&:hover": {
+                  backgroundColor: "rgba(0,0,0,0.6)",
+                },
+              }}
+            >
+              Join now
+            </Button>
+          </Box>
+          <DrawerComp pages={pages} />
+        </Toolbar>
+      </AppBar>
+    </header>
   );
 }
 

@@ -18,7 +18,7 @@ function MenuHeader() {
     };
   };
   return (
-    <>
+    <header>
       <CustomBox>
         <nav className={classes.nav}>
           <NavLink to="/menu" end style={navLinkStyles}>
@@ -36,7 +36,7 @@ function MenuHeader() {
         </nav>
       </CustomBox>
       <Divider />
-    </>
+    </header>
   );
 }
 
